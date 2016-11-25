@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/appbar_elevation"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ImageView
+        android:id="@+id/stockhawk_logo_overview"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="center"
+        android:src="@drawable/icon_stockhawk"
+        android:elevation="@dimen/appbar_elevation"
+        android:background="@color/material_blue_500"
+        android:contentDescription="@string/app_name" />
+
+    <!-- This view is used to provide the area that is overlapped
+         as well as the anchor point that the weather detail will
+         use to overlap the "appbar" -->
+    <View
+        android:elevation="@dimen/appbar_elevation"
+        android:background="@color/material_blue_500"
+        android:layout_below="@id/stockhawk_logo_overview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_app_bar_overlap"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stock_detail_container"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/stockhawk_logo_overview"
+        android:layout_marginLeft="@dimen/abc_list_item_padding_horizontal_material"
+        android:layout_marginStart="@dimen/abc_list_item_padding_horizontal_material"
+        android:layout_marginRight="@dimen/abc_list_item_padding_horizontal_material"
+        android:layout_marginEnd="@dimen/abc_list_item_padding_horizontal_material"
+        app:cardElevation="@dimen/detail_card_elevation"
+        app:cardPreventCornerOverlap="false"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stock_detail_container">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <!-- Empty TextView -->
+        <TextView
+            android:id="@+id/recycler_view_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:visibility="gone"
+            />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add_white_24dp"
+            fab:fab_colorNormal="@color/material_blue_500"
+            fab:fab_colorPressed="@color/material_blue_600"
+            fab:fab_colorRipple="@color/ripple"
+            fab:fab_shadow="true"
+            fab:fab_type="normal"
+            fab:layout_anchor="recycler_view"
+            fab:layout_anchorGravity="bottom | end"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

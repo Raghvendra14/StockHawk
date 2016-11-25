@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:initialKeyguardLayout="@layout/widget_stock_detail"
+    android:initialLayout="@layout/widget_stock_detail"
+    android:minHeight="@dimen/widget_stock_default_height"
+    android:minResizeHeight="@dimen/widget_stock_min_resize_height"
+    android:minResizeWidth="@dimen/widget_stock_min_resize_height"
+    android:minWidth="@dimen/widget_stock_default_width"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen|keyguard"
+    tools:ignore="UnusedAttribute"/>
+<!--Need to add preview image-->

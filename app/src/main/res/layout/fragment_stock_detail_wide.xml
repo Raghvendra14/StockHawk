@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <include layout="@layout/activity_line_graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/detail_additional_pane"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:columnCount="2"
+        android:background="@color/detail_accent_pane_background"
+        android:paddingLeft="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"
+        android:paddingRight="@dimen/abc_list_item_padding_horizontal_material">
+
+        <android.support.v7.widget.Space
+            app:layout_columnSpan="2"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/stock_symbol_label_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="@string/stock_symbol"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/detail_accent_label"
+            android:paddingTop="@dimen/detail_view_extra_padding"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material" />
+
+        <TextView
+            android:id="@+id/stock_symbol_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            tools:text="MSFT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/stock_first_trade_label_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="@string/first_trade"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/detail_accent_label"
+            android:paddingTop="@dimen/detail_view_extra_padding"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"
+            />
+
+        <TextView
+            android:id="@+id/stock_first_trade_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            tools:text="13/03/86"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/stock_last_trade_label_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="@string/last_trade"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/detail_accent_label"
+            android:paddingTop="@dimen/detail_view_extra_padding"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"
+            />
+
+        <TextView
+            android:id="@+id/stock_last_trade_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            tools:text="16/09/16"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/stock_currency_label_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="@string/currency"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/detail_accent_label"
+            android:paddingTop="@dimen/detail_view_extra_padding"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"/>
+
+        <TextView
+            android:id="@+id/stock_currency_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            tools:text="USD"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/stock_bid_price_label_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="@string/bid_price"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/detail_accent_label"
+            android:paddingTop="@dimen/detail_view_extra_padding"
+            android:paddingLeft="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingRight="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"
+            android:paddingBottom="@dimen/detail_container_bottom_margin"/>
+
+        <TextView
+            android:id="@+id/stock_bid_price_textview"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            tools:text="57.08"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            />
+
+        <android.support.v7.widget.Space
+            app:layout_columnSpan="2"
+            app:layout_rowWeight="1" />
+
+    </android.support.v7.widget.GridLayout>
+</LinearLayout>

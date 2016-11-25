@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Extra Padding - This one actually smaller on tablets -->
+    <dimen name="detail_view_extra_padding">32dp</dimen>
+    <dimen name="list_item_extra_padding">16dp</dimen>
+</resources>
